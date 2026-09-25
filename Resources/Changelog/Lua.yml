@@ -5500,3 +5500,22 @@ Entries:
   id: 353
   time: '2026-09-25T17:55:07.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/672
+- author: CQuarian-dev
+  changes:
+    - type: Add
+      message: >-
+        Новые ремапы шаттлов Нордфолла: Shukra и Azure на замену старых Shukra-F
+        и Shukra-2.
+    - type: Add
+      message: Новый ремап Serpent (Серпент).
+    - type: Tweak
+      message: Небольшой ремап BM-Fish с черного рынка.
+    - type: Tweak
+      message: Изменение цен на некоторые шаттлы Нордфолла.
+    - type: Fix
+      message: >-
+        Исправление и улучшение по мелочи шаттлов Нордфолла, включая критические
+        изменения у Strizh и Skif.
+  id: 354
+  time: '2026-09-25T18:15:06.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/670
