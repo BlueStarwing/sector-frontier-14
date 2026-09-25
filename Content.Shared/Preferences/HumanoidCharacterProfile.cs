@@ -10,7 +10,7 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
 using Content.Shared.Traits;
-using Content.Shared._Lua.ERP;
+using Content.Shared.ERP;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
@@ -19,7 +19,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using Content.Shared.Lua.CLVar;
+using Content.Lua.Common.CLVar;
 
 namespace Content.Shared.Preferences
 {
@@ -135,7 +135,7 @@ namespace Content.Shared.Preferences
         public Gender Gender { get; private set; } = Gender.Male;
 
         [DataField] // Frontier: Bank balance
-        public int BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance
+        public int BankBalance { get; private set; } = 0; // Frontier: unused on character; account bank is PlayerPreferences.BankBalance
 
             // YUPI: Persistent per-slot account code (6 chars A-Z, excluding I/O, and digits 1-9). Uppercase stored. //Lua
     [DataField]
@@ -327,7 +327,7 @@ namespace Content.Shared.Preferences
         }
 
         // TODO: This should eventually not be a visual change only.
-        public static HumanoidCharacterProfile Random(HashSet<string>? ignoredSpecies = null, int balance = DefaultBalance)
+        public static HumanoidCharacterProfile Random(HashSet<string>? ignoredSpecies = null, int balance = 0)
         {
             var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
             var random = IoCManager.Resolve<IRobustRandom>();
@@ -341,7 +341,7 @@ namespace Content.Shared.Preferences
             return RandomWithSpecies(species: species, balance: balance);
         }
 
-        public static HumanoidCharacterProfile RandomWithSpecies(string? species = null, int balance = DefaultBalance) // Frontier: add balance arg
+        public static HumanoidCharacterProfile RandomWithSpecies(string? species = null, int balance = 0) // Frontier: add balance arg; account bank is separate
         {
             species ??= SharedHumanoidAppearanceSystem.DefaultSpecies;
 
