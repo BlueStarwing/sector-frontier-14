@@ -5481,3 +5481,22 @@ Entries:
   id: 352
   time: '2026-09-25T17:29:14.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/671
+- author: 25Hydra08
+  changes:
+    - type: Add
+      message: Добавлен шаттл Gulag by HolyPain
+    - type: Add
+      message: Добавлен шаттл Gegb by HolyPain
+    - type: Add
+      message: Добавлен шаттл Komsomol by HolyPain
+    - type: Add
+      message: Добавлен шаттл Marauder by HolyPain
+    - type: Tweak
+      message: Изменена станция Солнечный-26 в соответствии с маппингом игроков
+    - type: Fix
+      message: Исправлена часть Этических Исключений (болезни, и т.д.)
+    - type: Fix
+      message: Исправлен маппинг Горизонта
+  id: 353
+  time: '2026-09-25T17:55:07.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/672
